@@ -4,9 +4,10 @@ import com.example.currencyapp.RatesItem
 import kotlin.random.Random
 
 class RatesRepository {
+    private val data = generateMockRates()
 
     fun getRates(): List<RatesItem> {
-        return generateMockRates()
+        return data
     }
 
     // dummy data generator
