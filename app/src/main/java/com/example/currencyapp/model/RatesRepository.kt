@@ -1,9 +1,11 @@
 package com.example.currencyapp.model
 
 import com.example.currencyapp.RatesItem
+import javax.inject.Inject
 import kotlin.random.Random
 
-class RatesRepository {
+// the @Inject tells hilt to provide an instance of this class whenever it's required
+class RatesRepository @Inject constructor(){
     private val data = generateMockRates()
 
     fun getRates(): List<RatesItem> {

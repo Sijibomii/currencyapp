@@ -6,10 +6,15 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 import com.example.currencyapp.use_case.GetRatesUseCase;
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class RatesViewModel(): ViewModel() {
+@HiltViewModel
+class RatesViewModel @Inject constructor(
+    private val getRatesUseCase: GetRatesUseCase
+): ViewModel() {
 
-    private val getRatesUseCase: GetRatesUseCase = GetRatesUseCase()
+
     // kotlin state flow helps to manage and observe changes in data over time.
     // it allows you to create a stream of values that can be observed by other componets in your code
     // this is a mutable state flow variable that represents the current state of the list of rates item

@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.currencyapp.databinding.FragmentRatesBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import kotlin.random.Random;
 /**
@@ -18,6 +19,7 @@ import kotlin.random.Random;
  * Use the [RatesFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+@AndroidEntryPoint
 class RatesFragment : Fragment() {
     // to access views defined in the xml layout
     private lateinit var binding: FragmentRatesBinding
