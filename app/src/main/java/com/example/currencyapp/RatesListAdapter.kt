@@ -30,5 +30,7 @@ class RatesListAdapter: Adapter<RatesViewHolder>() {
     fun updateList(data: List<RatesItem>) {
         ratesList.clear()
         ratesList.addAll(data)
+        // notify data has changed
+        notifyDataSetChanged()
     }
 }

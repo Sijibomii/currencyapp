@@ -5,8 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.currencyapp.databinding.FragmentRatesBinding
+import kotlinx.coroutines.launch
 import kotlin.random.Random;
 /**
  * A simple [Fragment] subclass.
@@ -16,8 +21,22 @@ import kotlin.random.Random;
 class RatesFragment : Fragment() {
     // to access views defined in the xml layout
     private lateinit var binding: FragmentRatesBinding
-
+    // adapter init code
+    private val ratesAdapter = RatesListAdapter()
+    private val viewModel: RatesViewModel by viewModels()
     //
+
+    init {
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.RESUMED) {
+                viewModel.rates.collect { rates ->
+                    ratesAdapter.updateList(rates)
+                }
+            }
+        }
+    }
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,6 +45,12 @@ class RatesFragment : Fragment() {
         // Inflate the layout for this fragment
         return binding.root
     }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.getRates()
+    }
+
     // The onViewCreated method is overridden to customize what happens after the fragment's view has been created.
     // This method is called immediately after onCreateView. It’s where you typically set up your views and UI components.
     // The view parameter is the root view of the fragment, and savedInstanceState contains any saved state information.
@@ -38,24 +63,9 @@ class RatesFragment : Fragment() {
             // In this case, LinearLayoutManager is used, which arranges the items in a linear list (either vertically or horizontally).
             layoutManager = LinearLayoutManager(context)
             // This sets the adapter for the RecyclerView. RatesListAdapter is a custom adapter class that manages how data is displayed in the RecyclerView.
-            adapter = RatesListAdapter().apply {
-                updateList(generateMockRates())
-            }
+            adapter = ratesAdapter
         }
     }
 
-    // dummy data generator
-    private fun generateMockRates(): List<RatesItem> {
-        return (0 until 100)
-            .map {
-                RatesItem(
-                    symbolCode = mockSymbolCode(),
-                    rateValue = String.format("%.4f", Random.nextInt(10000, 99999) / 10000f)
-                )
-            }
-    }
-    // generate random currency codes
-    private fun mockSymbolCode(): String {
-        return (0 until 3).map { Random.nextInt(65, 90).toChar() }.joinToString(separator = "")
-    }
+
 }
