@@ -54,6 +54,7 @@ dependencies {
     implementation ("androidx.fragment:fragment-ktx:1.6.2")
     implementation ("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("com.google.android.material:material:1.12.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

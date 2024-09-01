@@ -8,10 +8,21 @@
     tools:context=".MainActivity">
 <!--match parent means width and height would occupy whole activity space-->
 <!--    name is the name of the class implementing the fragment-->
+<!-- setting the height to 0dp means the height is determined by constraints rather than the view itself-->
+<!-- in this case the constraints are bottom of and top of-->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment"
         android:name="com.example.currencyapp.RatesFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavMenu"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
