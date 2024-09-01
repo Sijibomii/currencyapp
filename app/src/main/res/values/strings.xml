@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">currencyapp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="rates">Rates</string>
     <string name="charts">Charts</string>
+    <string name="cd_chart_view">chart view</string>
 </resources>

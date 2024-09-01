@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- the item id here should match the id of the fragment it leads to (in the nav_graph file)-->
+<!-- this item leads to the rateFragement-->
     <item
-        android:id="@+id/itemRates"
+        android:id="@+id/ratesFragment"
         android:enabled="true"
         android:icon="@drawable/currency_exchange"
         android:title="@string/rates" />
-
+<!--this item leads to the chartsFragment-->
     <item
-        android:id="@+id/itemChart"
+        android:id="@+id/chartsFragment"
         android:enabled="true"
         android:icon="@drawable/show_chart"
         android:title="@string/charts"/>

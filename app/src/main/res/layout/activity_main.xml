@@ -10,13 +10,25 @@
 <!--    name is the name of the class implementing the fragment-->
 <!-- setting the height to 0dp means the height is determined by constraints rather than the view itself-->
 <!-- in this case the constraints are bottom of and top of-->
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment"
-        android:name="com.example.currencyapp.RatesFragment"
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/fragment"-->
+<!--        android:name="com.example.currencyapp.RatesFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/bottomNavMenu"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+<!---->
+<!--    the nav host fragment class is provided by jetpack navigation package-->
+    <fragment
+        android:id="@+id/navHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"
         app:layout_constraintBottom_toTopOf="@id/bottomNavMenu"
         app:layout_constraintTop_toTopOf="parent"/>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavMenu"

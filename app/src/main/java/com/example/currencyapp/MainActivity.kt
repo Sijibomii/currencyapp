@@ -1,10 +1,14 @@
 package com.example.currencyapp
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.example.currencyapp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 // MainActivity: Scoped to a single screen or user interaction session.
@@ -14,10 +18,14 @@ import dagger.hilt.android.AndroidEntryPoint
 // Responsible for handling UI logic, user interactions, and navigating between different screens.
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
+
+        binding.bottomNavMenu.setupWithNavController(findNavController(R.id.navHostFragment))
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
