@@ -5,13 +5,13 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-import com.example.currencyapp.use_case.GetRatesUseCase;
+import com.example.currencyapp.use_case.GetSelectedRatesUseCase;
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class RatesViewModel @Inject constructor(
-    private val getRatesUseCase: GetRatesUseCase
+    private val getRatesUseCase: GetSelectedRatesUseCase
 ): ViewModel() {
 
 

@@ -5,26 +5,29 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class RatesRepositoryTest {
-
     @Test
     fun getRatesTest() {
         val repository: RatesRepository = RatesRepository()
-        val rates1 = repository.getRates()
-        val rates2 = repository.getRates()
 
-        assertEquals(rates1.size, rates2.size)
+        val symbols = repository.getAvailableSymbols()
+        val rates2 = repository.getRates(symbols)
+
+        assertEquals(rates2.size, symbols.size)
+        rates2.indices.forEach {
+            assertEquals(rates2[it].symbolCode, symbols[it].code)
+        }
     }
 
     @Test
-    fun getRatesAdvancedTest() {
-        val repository = RatesRepository()
+    fun testGetRatesBySelectedSymbols() {
+        val repository: RatesRepository = RatesRepository()
 
-        val rates1 = repository.getRates()
-        val rates2 = repository.getRates()
+        val symbols = repository.getAvailableSymbols().take(5)
+        val rates1 = repository.getRates(symbols)
 
+        assertEquals(rates1.size, symbols.size)
         rates1.indices.forEach {
-            assertEquals(rates1[it].symbolCode, rates2[it].symbolCode)
-            assertEquals(rates1[it].rateValue, rates2[it].rateValue)
+            assertEquals(rates1[it].symbolCode, symbols[it].code)
         }
     }
 }

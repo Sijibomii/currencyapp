@@ -4,4 +4,6 @@
     <string name="rates">Rates</string>
     <string name="charts">Charts</string>
     <string name="cd_chart_view">chart view</string>
+    
+    <string name="add_currency">Add currency</string>
 </resources>

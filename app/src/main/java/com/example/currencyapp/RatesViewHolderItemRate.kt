@@ -6,12 +6,12 @@ import com.example.currencyapp.databinding.RatesListItemBinding
 // a view holder inherits from view holder
 // the view holder needs a view as a parameter. we have to convert our xml file into a view using the view binding feature
 // view binding would generate a separate class for each xml file
-class RatesViewHolder(
+class RatesViewHolderItemRate(
     // import the class created for our rate_list_item xml
-    private val binding: RatesListItemBinding
-): ViewHolder(
+    binding: RatesListItemBinding
+): RatesViewHolderBase<RatesListItemBinding>(
     // pass the biding into the base class
-    binding.root
+    binding
 ) {
     // function to map rate item to ui.
     fun bind(item: RatesItem) {
