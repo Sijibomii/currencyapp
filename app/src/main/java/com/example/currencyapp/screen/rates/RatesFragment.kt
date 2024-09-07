@@ -1,4 +1,4 @@
-package com.example.currencyapp
+package com.example.currencyapp.screen.rates
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,10 +11,11 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.currencyapp.R
 import com.example.currencyapp.databinding.FragmentRatesBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import kotlin.random.Random;
+
 /**
  * A simple [Fragment] subclass.
  * Use the [RatesFragment.newInstance] factory method to

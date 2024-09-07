@@ -1,4 +1,4 @@
-package com.example.currencyapp
+package com.example.currencyapp.screen.rates
 
 import com.example.currencyapp.databinding.RatesListAddItemBinding
 // A ViewHolder is a class used to represent the views for each item in a RecyclerView.

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RatesFragment">
+    tools:context=".screen.rates.RatesFragment">
 <!--    tools:context=".RatesFragment": This attribute indicates that the layout is associated with the RatesFragment class. It helps Android Studio preview the layout in the context of that fragment.-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerRates"

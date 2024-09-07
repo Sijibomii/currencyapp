@@ -1,4 +1,4 @@
-package com.example.currencyapp
+package com.example.currencyapp.screen.chart
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

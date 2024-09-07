@@ -1,8 +1,9 @@
-package com.example.currencyapp
+package com.example.currencyapp.screen.edit_symbols
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.currencyapp.SymbolItem
 import com.example.currencyapp.databinding.EditSymbolsItemViewBinding
 
 

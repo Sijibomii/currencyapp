@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.kotlin.kapt)
+
 }
 // build.gradle for managing external dependencies and build configurations
 android {
@@ -55,7 +56,7 @@ dependencies {
     implementation ("com.google.dagger:hilt-android:2.44")
     implementation(libs.androidx.legacy.support.v4)
     implementation(libs.androidx.lifecycle.livedata.ktx)
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
     implementation("com.google.android.material:material:1.12.0")
 
     // navigation

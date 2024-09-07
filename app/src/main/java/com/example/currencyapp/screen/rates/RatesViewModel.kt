@@ -1,6 +1,7 @@
-package com.example.currencyapp
+package com.example.currencyapp.screen.rates
 
 import androidx.lifecycle.ViewModel
+import com.example.currencyapp.RatesItem
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

@@ -1,13 +1,14 @@
 package com.example.currencyapp
 
 import com.example.currencyapp.model.RatesRepository
+import com.example.currencyapp.model.RatesRepositoryImpl
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class RatesRepositoryTest {
     @Test
     fun getRatesTest() {
-        val repository: RatesRepository = RatesRepository()
+        val repository: RatesRepository = RatesRepositoryImpl()
 
         val symbols = repository.getAvailableSymbols()
         val rates2 = repository.getRates(symbols)
@@ -20,7 +21,7 @@ class RatesRepositoryTest {
 
     @Test
     fun testGetRatesBySelectedSymbols() {
-        val repository: RatesRepository = RatesRepository()
+        val repository: RatesRepository = RatesRepositoryImpl()
 
         val symbols = repository.getAvailableSymbols().take(5)
         val rates1 = repository.getRates(symbols)

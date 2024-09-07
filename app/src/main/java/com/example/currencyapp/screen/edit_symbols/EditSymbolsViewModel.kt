@@ -1,7 +1,8 @@
-package com.example.currencyapp
+package com.example.currencyapp.screen.edit_symbols
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.currencyapp.SymbolItem
 import com.example.currencyapp.use_case.GetAvailableSymbolsUseCase
 import com.example.currencyapp.use_case.SelectedSymbolsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel

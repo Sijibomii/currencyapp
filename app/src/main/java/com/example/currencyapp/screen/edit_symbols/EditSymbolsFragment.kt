@@ -1,4 +1,4 @@
-package com.example.currencyapp
+package com.example.currencyapp.screen.edit_symbols
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle

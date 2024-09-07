@@ -1,6 +1,6 @@
-package com.example.currencyapp
+package com.example.currencyapp.screen.rates
 
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.currencyapp.RatesItem
 import com.example.currencyapp.databinding.RatesListItemBinding
 
 // a view holder inherits from view holder

@@ -1,10 +1,11 @@
-package com.example.currencyapp
+package com.example.currencyapp.screen.rates
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.viewbinding.ViewBinding
+import com.example.currencyapp.RatesItem
 import com.example.currencyapp.databinding.RatesListAddItemBinding
 import com.example.currencyapp.databinding.RatesListItemBinding
 
