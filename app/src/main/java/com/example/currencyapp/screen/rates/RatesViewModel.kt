@@ -1,12 +1,12 @@
 package com.example.currencyapp.screen.rates
 
 import androidx.lifecycle.ViewModel
-import com.example.currencyapp.RatesItem
+import com.example.common.model.RatesItem
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-import com.example.currencyapp.use_case.GetSelectedRatesUseCase;
+import com.example.use_case.GetSelectedRatesUseCase;
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

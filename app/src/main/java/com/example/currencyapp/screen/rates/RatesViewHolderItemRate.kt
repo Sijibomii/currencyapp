@@ -1,6 +1,6 @@
 package com.example.currencyapp.screen.rates
 
-import com.example.currencyapp.RatesItem
+import com.example.common.model.RatesItem
 import com.example.currencyapp.databinding.RatesListItemBinding
 
 // a view holder inherits from view holder

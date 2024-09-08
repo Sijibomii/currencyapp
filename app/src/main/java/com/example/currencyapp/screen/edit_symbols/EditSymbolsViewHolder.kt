@@ -1,7 +1,7 @@
 package com.example.currencyapp.screen.edit_symbols
 
 import androidx.recyclerview.widget.RecyclerView
-import com.example.currencyapp.SymbolItem
+import com.example.common.model.SymbolItem
 import com.example.currencyapp.databinding.EditSymbolsItemViewBinding
 
 /**

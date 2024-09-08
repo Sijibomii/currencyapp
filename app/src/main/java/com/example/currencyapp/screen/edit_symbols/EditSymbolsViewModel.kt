@@ -2,9 +2,9 @@ package com.example.currencyapp.screen.edit_symbols
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.currencyapp.SymbolItem
-import com.example.currencyapp.use_case.GetAvailableSymbolsUseCase
-import com.example.currencyapp.use_case.SelectedSymbolsUseCase
+import com.example.common.model.SymbolItem
+import com.example.use_case.GetAvailableSymbolsUseCase
+import com.example.use_case.SelectedSymbolsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

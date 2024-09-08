@@ -1,7 +1,7 @@
 package com.example.currencyapp
 
-import com.example.currencyapp.model.RatesRepository
-import com.example.currencyapp.model.RatesRepositoryImpl
+import com.example.rates_repository.RatesRepository
+import com.example.rates_repository_impl.RatesRepositoryImpl
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

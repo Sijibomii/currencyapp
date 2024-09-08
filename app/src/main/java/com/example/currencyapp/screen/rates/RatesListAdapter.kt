@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.viewbinding.ViewBinding
-import com.example.currencyapp.RatesItem
+import com.example.common.model.RatesItem
 import com.example.currencyapp.databinding.RatesListAddItemBinding
 import com.example.currencyapp.databinding.RatesListItemBinding
 

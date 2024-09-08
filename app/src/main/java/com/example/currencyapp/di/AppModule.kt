@@ -1,9 +1,7 @@
 package com.example.currencyapp.di
 
-import com.example.currencyapp.UserSettings
-import com.example.currencyapp.UserSettingsImpl
-import com.example.currencyapp.model.RatesRepository
-import com.example.currencyapp.model.RatesRepositoryImpl
+import com.example.rates_repository.RatesRepository
+import com.example.rates_repository_impl.RatesRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -18,5 +16,5 @@ abstract class AppModule {
     abstract fun bindsRatesRepository(repoImpl: RatesRepositoryImpl): RatesRepository
 
     @Binds
-    abstract fun bindsUserSettings(settingsImpl: UserSettingsImpl): UserSettings
+    abstract fun bindsUserSettings(settingsImpl: com.example.user_settings_impl.UserSettingsImpl): com.example.user_settings.UserSettings
 }
